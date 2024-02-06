@@ -1,0 +1,167 @@
+body{
+  --s: 180px;
+  --c1: #1f1f1f;
+  --c2: #3f3f3f;
+  --c3: #2f2f2f;
+
+  --_g: 0 120deg, #0000 0;
+  background: conic-gradient(
+      from 0deg at calc(500% / 6) calc(100% / 3),
+      var(--c3) var(--_g)
+    ),
+    conic-gradient(
+      from -120deg at calc(100% / 6) calc(100% / 3),
+      var(--c2) var(--_g)
+    ),
+    conic-gradient(
+      from 120deg at calc(100% / 3) calc(500% / 6),
+      var(--c1) var(--_g)
+    ),
+    conic-gradient(
+      from 120deg at calc(200% / 3) calc(500% / 6),
+      var(--c1) var(--_g)
+    ),
+    conic-gradient(
+      from -180deg at calc(100% / 3) 50%,
+      var(--c2) 60deg,
+      var(--c1) var(--_g)
+    ),
+    conic-gradient(
+      from 60deg at calc(200% / 3) 50%,
+      var(--c1) 60deg,
+      var(--c3) var(--_g)
+    ),
+    conic-gradient(
+      from -60deg at 50% calc(100% / 3),
+      var(--c1) 120deg,
+      var(--c2) 0 240deg,
+      var(--c3) 0
+    );
+  background-size: calc(var(--s) * 1.732) var(--s);
+}
+
+.container{
+  margin: 20px 50px 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#header{
+  margin-bottom: 100px;
+}
+
+#searchs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.container h1{
+  margin-bottom: 10px;
+  font-size: 90px;
+  text-align: center;
+  color: white;
+  display: block;
+}
+.container h2{
+  margin-top: 0px;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+#locationInput{
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 40px;
+  border: #dc0000 2px solid;
+  border-radius: 10px;
+  background-color: #2f2f2f;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  transition: 0.2s;
+}
+#locationInput::placeholder{
+  color: white;
+}
+#locationInput:hover{
+  box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+  -webkit-box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+  -moz-box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+}
+#locationInput:focus{
+  outline: none;
+  border: #dc0000 2px solid;
+  box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+  -webkit-box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+  -moz-box-shadow: 1px 1px 29px 9px rgba(220,0,0,0.83);
+}
+
+#searchButton{
+  border: #dc0000 solid 1px;
+  border-radius: 5px;
+  background-color: #2f2f2f;
+  color: white;
+  font-size: 40px;
+  -webkit-box-shadow: 0px 0px 20px 5px #dc0000;
+  -moz-box-shadow: 0px 0px 20px 5px #dc0000;
+  -ms-box-shadow: 0px 0px 20px 5px #dc0000;
+  -o-box-shadow: 0px 0px 20px 5px #dc0000;
+  box-shadow: 0px 0px 20px 5px #dc0000;
+}
+
+#searchButton:active{
+  border: #b90000 solid 1px;
+  border-radius: 5px;
+  background-color: #2f2f2f;
+  color: white;
+  font-size: 40px;
+  -webkit-box-shadow: 0px 0px 15px 5px #dc0000;
+  -moz-box-shadow: 0px 0px 15px 5px #dc0000;
+  -ms-box-shadow: 0px 0px 15px 5px #dc0000;
+  -o-box-shadow: 0px 0px 15px 5px #dc0000;
+  box-shadow: 0px 0px 15px 5px #dc0000;
+}
+
+.weather-info{
+  background-color: rgb(47, 47, 47, 20%);
+  border: transparent 2px solid;
+  padding: 30px 30px 30px 30px;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+.weather-info:hover{
+  border: #dc0000 2px solid;
+  background-color: rgb(47, 47, 47, 40%);
+  border-radius: 10px;
+}
+
+#location{
+  font-size: 40px;
+}
+
+#temps{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 10%;
+}
+#temperatureC, #temperatureF{
+  display: inline-block;
+  color: white;
+  font-size: 60px;
+}
+#description{
+  font-size: 30px;
+}
+#icons{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#icon{
+  width: 128 px;
+}
